@@ -2,12 +2,67 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go — интернет-магазин по продаже кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="header container">
+      <div class="header__wrapper">
+        <a class="header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="82" height="36">
+            <img src="images/logo-mobile.svg" width="32" height="36" alt="Логотип компании Drink2Go.">
+          </picture>
+          <span>Интернет-магазин кофейных напитков</span>
+        </a>
+        <nav class="header__nav">
+          <!--js-header-list - Класс для открытия меня с помощью JS-->
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link header__link--current" href="#">Главная</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Каталог</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Доставка</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">О нас</a>
+            </li>
+          </ul>
+          <ul class="header__user-list">
+            <li class="header__user-item">
+              <a class="header__user-link" href="#">
+                <svg class="header__user-icon" width="16" height="16" aria-hidden="true" focusable="false" role="img" aria-label="Значок пользователя.">
+                  <use xlink:href="images/icons/stack.svg#user"></use>
+                </svg>
+                <span>Войти</span>
+              </a>
+            </li>
+            <li class="header__user-item">
+              <a class="header__user-link" href="#">
+                <svg class="header__user-icon" width="16" height="16" aria-hidden="true" focusable="false" role="img" aria-label="Значок пользователя.">
+                  <use xlink:href="images/icons/stack.svg#union"></use>
+                </svg>
+                <span>Корзина</span>
+              </a>
+            </li>
+            <li class="header__user-item" href="#">
+              <!--is-active - Класс для активации кнопки меню с помощью JS-->
+              <button class="header__button js-toggle-button" type="button" aria-label="Кнопка открытия меню.">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page__main"></main>
   </body>
 </html>
