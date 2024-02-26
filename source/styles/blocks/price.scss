@@ -1,0 +1,35 @@
+.price {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $width-desktop) {
+    margin-left: inherit;
+  }
+}
+
+.price__wrapper {
+  display: flex;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.price__old {
+  font-size: 16px;
+  line-height: 32px;
+  color: $primary-color;
+  text-decoration: line-through;
+}
+
+.price__new {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.price__button {
+  width: 113px;
+  z-index: 2;
+}

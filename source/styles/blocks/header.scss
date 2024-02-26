@@ -1,11 +1,10 @@
 .header__wrapper {
   display: flex;
-  align-items: center;
   position: relative;
 }
 
 .header__logo {
-  padding: 11px 0;
+  padding: 9px 0;
 }
 
 .header__logo span {
@@ -14,23 +13,24 @@
 
 .header__list {
   @include list-reset;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 320px;
   display: none;
   left: -20px;
   top: 100%;
+  background-color: $body-color;
 }
 
 .js-header-list {
   position: absolute;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 4;
 }
 
 .header__item {
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
   border-top: 1px solid $secondary-color;
 }
 
@@ -43,6 +43,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
+  padding: 20px 80px;
 }
 
 .header__user-list {
@@ -66,6 +67,7 @@
 
 .header__user-link span {
   display: none;
+  font-weight: 500;
 }
 
 .header__user-icon {
@@ -132,10 +134,14 @@
     gap: 46px;
   }
 
+  .header__logo {
+    padding: 19px 0;
+  }
+
   .header__nav {
     max-width: 600px;
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 60px;
   }
 
@@ -152,6 +158,11 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    border-top: none;
+  }
+
+  .header__item:last-child {
+    border-bottom: none;
   }
 
   .header__link {
@@ -159,7 +170,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    padding: 30px 20px;
+    padding: 31px 20px;
 
     &--current {
       border-bottom: 2px solid $primary-color;
@@ -186,8 +197,10 @@
   .header__logo {
     text-decoration: none;
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
+    padding-top: 23px;
+    padding-bottom: 15px;
   }
 
   .header__logo span {
@@ -231,7 +244,7 @@
   }
 
   .header__user-link:hover .header__user-icon,
-  .header__user-link:focus .header__user-icon,
+  .header__user-link:focus-visible .header__user-icon,
   .header__user-link:active .header__user-icon {
     fill: $primary-color;
   }
@@ -250,12 +263,12 @@
 }
 
 .header__link:hover,
-.header__link:focus {
+.header__link:focus-visible {
   color: $primary-color;
 }
 
 .header__user-link:hover,
-.header__user-link:focus {
+.header__user-link:focus-visible {
   color: $primary-color;
 }
 

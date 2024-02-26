@@ -1,0 +1,30 @@
+.button {
+  background-color: $primary-color;
+  color: $light-text-color;
+  border: none;
+  font-family: $primary-font;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  word-break: break-all;
+  cursor: pointer;
+
+  &--secondary {
+    background-color: $body-color;
+    color: $primary-color;
+  }
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: #9070ec;
+}
+
+.button:active {
+  background-color: #593cac;
+}
+
+.button:disabled {
+  background-color: $disabled-color;
+  cursor: auto;
+}
