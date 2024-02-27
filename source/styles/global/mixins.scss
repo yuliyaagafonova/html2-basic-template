@@ -29,7 +29,7 @@
   line-height: 20px;
   color: $primary-color;
   text-transform: uppercase;
-  letter-spacing: 4%;
+  letter-spacing: 0.05em;
 }
 
 @mixin small-text {
@@ -80,4 +80,14 @@
     font-size: 42px;
     line-height: 64px;
   }
+}
+
+@mixin filter-text {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  color: $base-text-color;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
 }

@@ -4,7 +4,7 @@
   border: none;
   font-family: $primary-font;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 4px;
   word-break: break-all;
   cursor: pointer;
@@ -20,8 +20,17 @@
   background-color: #9070ec;
 }
 
+.button--secondary:hover,
+.button--secondary:focus-visible {
+  color: $body-color;
+}
+
 .button:active {
   background-color: #593cac;
+}
+
+.button--secondary:active {
+  color: $body-color;
 }
 
 .button:disabled {

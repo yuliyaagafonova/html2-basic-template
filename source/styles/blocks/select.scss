@@ -1,0 +1,21 @@
+.select {
+  display: flex;
+  text-align: start;
+  gap: 8px;
+}
+
+.select__title {
+  @include filter-text;
+  padding-top: 5px;
+}
+
+.select__control {
+  @include filter-text;
+  color: $primary-color;
+  width: 165px;
+  height: 32px;
+  padding: 4px 10px 4px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

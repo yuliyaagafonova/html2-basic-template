@@ -5,6 +5,8 @@
     <title>Drink2Go — интернет-магазин по продаже кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header container">
@@ -140,7 +142,7 @@
                           <span class="price__new">375₽</span>
                         </div>
                         <button class="price__button button" type="button">Заказать</button>
-                    </div>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -211,10 +213,254 @@
           </ul>
         </div>
       </section>
+      <section class="catalog">
+        <div class="catalog__wrapper container">
+          <span class="catalog__accent">Каталог</span>
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
+          <div class="catalog__wrapper-content">
+            <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="filter__wrapper">
+                <div class="filter__wrapper-fieldsets">
+                  <fieldset class="filter__group">
+                    <legend class="filter__title">Цена</legend>
+                    <ul class="filter__list range-price">
+                      <li class="range-price__item">
+                        <div class="range-price__bar">
+                          <div class="range-price__bar-active">
+                            <span class="visually-hidden">Ползунок регулировки цены.</span>
+                            <button class="range-price__toggle range-price__toggle--min" type="button">
+                              <span class="visually-hidden">Изменить минимальную цену.</span>
+                            </button>
+                            <button class="range-price__toggle range-price__toggle--max" type="button">
+                              <span class="visually-hidden">Изменить максимальную цену.</span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <div class="range-price__input-wrapper">
+                        <li class="range-price__item">
+                          <label class="range-price__label">
+                            <span class="visually-hidden">Минимальная цена.</span>
+                            <input class="range-price__input range-price__input--min" type="number" placeholder="0" name="price-min">
+                          </label>
+                        </li>
+                        <span></span>
+                        <li class="range-price__item">
+                          <label class="range-price__label">
+                            <span class="visually-hidden">Максимальная цена.</span>
+                            <input class="range-price__input range-price__input--max" type="number" value="900" placeholder="900" name="price-max">
+                          </label>
+                        </li>
+                      </div>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__group">
+                    <legend class="filter__title">Наличие молока</legend>
+                    <ul class="filter__list filter__list--radio">
+                      <li class="filter__item">
+                        <input class="filter__radio visually-hidden" type="radio" name="milk" value="no-matter" id="radio1" checked>
+                        <span class="filter__radio-style"></span>
+                        <label class="filter__control" for="radio1">Неважно</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__radio visually-hidden" type="radio" name="milk" value="animal" id="radio2">
+                        <span class="filter__radio-style"></span>
+                        <label class="filter__control" for="radio2">Только животное</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__radio visually-hidden" type="radio" name="milk" value="plant" id="radio3">
+                        <span class="filter__radio-style"></span>
+                        <label class="filter__control" for="radio3">Только растительное</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__radio visually-hidden" type="radio" name="milk" value="plant" id="radio4" disabled>
+                        <span class="filter__radio-style"></span>
+                        <label class="filter__control" for="radio4">Без молока</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <fieldset class="filter__group">
+                    <legend class="filter__title">Страна произрастания</legend>
+                    <ul class="filter__list filter__list--checkbox">
+                      <li class="filter__item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" name="Brazil" id="checkbox1" checked>
+                        <span class="filter__checkbox-style"></span>
+                        <label class="filter__control" for="checkbox1">Бразилия</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" name="Ethiopia" id="checkbox2">
+                        <span class="filter__checkbox-style"></span>
+                        <label class="filter__control" for="checkbox2">Эфиопия</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" name="Colombia" id="checkbox3">
+                        <span class="filter__checkbox-style"></span>
+                        <label class="filter__control" for="checkbox3">Колумбия</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" name="Costa Rica" id="checkbox4">
+                        <span class="filter__checkbox-style"></span>
+                        <label class="filter__control" for="checkbox4">Коста-Рика</label>
+                      </li>
+                      <li class="filter__item">
+                        <input class="filter__checkbox visually-hidden" type="checkbox" name="Peru" id="checkbox5" disabled>
+                        <span class="filter__checkbox-style"></span>
+                        <label class="filter__control" for="checkbox5">Перу</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+                <div class="filter__button-wrapper">
+                  <button class="filter__button button" type="submit">Применить</button>
+                  <button class="filter__button button button--secondary" type="reset">Сбросить</button>
+                </div>
+              </div>
+            </form>
+            <div class="catalog__cards">
+              <div class="catalog__cards-select select">
+                <span class="select__title">Сортировка:</span>
+                <select class="select__control" aria-label="Сортировка.">
+                  <option value="default">по умолчанию</option>
+                  <option value="cheap">сначала дешевые</option>
+                  <option value="expensive">сначала дорогие</option>
+                  <option value="rating">сначала с высоким рейтингом</option>
+                </select>
+              </div>
+              <ul class="catalog__cards-list">
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-1@1x.webp 1x, images/card-1@2x.webp 2x">
+                    <img class="card__img" src="images/card-1@1x.png" srcset="images/card-1@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-2@1x.webp 1x, images/card-2@2x.webp 2x">
+                    <img class="card__img" src="images/card-2@1x.png" srcset="images/card-2@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-3@1x.webp 1x, images/card-3@2x.webp 2x">
+                    <img class="card__img" src="images/card-3@1x.png" srcset="images/card-3@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-4@1x.webp 1x, images/card-4@2x.webp 2x">
+                    <img class="card__img" src="images/card-4@1x.png" srcset="images/card-4@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-5@1x.webp 1x, images/card-5@2x.webp 2x">
+                    <img class="card__img" src="images/card-5@1x.png" srcset="images/card-5@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="catalog__cards-item card">
+                  <picture>
+                    <source type="image/webp" srcset="images/card-6@1x.webp 1x, images/card-6@2x.webp 2x">
+                    <img class="card__img" src="images/card-6@1x.png" srcset="images/card-6@2x.png 2x" alt="Изображение напитка Декаф Флэт Уайт.">
+                  </picture>
+                  <p class="card__title">Декаф Флэт Уайт</p>
+                  <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="card__price-wrapper">
+                    <span class="card__price price__new">225₽</span>
+                    <button class="card__button button" type="button">
+                      <svg class="card__button-icon" width="20" height="16" aria-hidden="true" focusable="false">
+                        <use href="images/icons/stack.svg#union-plus"></use>
+                      </svg>
+                      <span class="card__button-text">В корзину</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="catalog__pagination">
+            <li class="catalog__pagination-item">
+              <button class="catalog__pagination-button" type="button">
+                <span class="catalog__pagination-button-text catalog__pagination-button-text--1 visually-hidden">Назад</span>
+                <svg class="catalog__pagination-icon catalog__pagination-icon--1" width="10" height="10" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#arrow"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link" href="#">1</a>
+            </li>
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link catalog__pagination-link--current" href="#">2</a>
+            </li>
+            <li class="catalog__pagination-item">
+              <a class="catalog__pagination-link" href="#">3</a>
+            </li>
+            <li class="catalog__pagination-item">
+              <button class="catalog__pagination-button" type="button">
+                <span class="catalog__pagination-button-text catalog__pagination-button-text--2 visually-hidden">Вперед</span>
+                <svg class="catalog__pagination-icon catalog__pagination-icon--2" width="10" height="10" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#arrow"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/slider.js" defer></script>
-
   </body>
 </html>
