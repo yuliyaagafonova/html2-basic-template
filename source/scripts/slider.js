@@ -37,18 +37,6 @@ function hideSlide() {
   slides[currentSlideIndex].classList.remove('block');
 }
 
-function blockArrowRight () {
-  if (currentSlideIndex = slides.length - 1) {
-    arrowRight.classList.add('disabled');
-  }
-}
-
-function unBlockArrowRight () {
-  if (currentSlideIndex < slides.length - 1) {
-    arrowRight.classList.remove('disabled');
-  }
-}
-
 function changeSlide(slideIndex) {
   hideSlide();
   removeActiveClass();
@@ -78,5 +66,3 @@ function previousSlide() {
 addPagination();
 arrowLeft.addEventListener('click', previousSlide);
 arrowRight.addEventListener('click', nextSlide);
-
-

@@ -1,10 +1,10 @@
-/* GLOBAL */
+//global
 @import "./global/variables.scss";
 @import "./global/mixins.scss";
 @import "./global/global.scss";
 @import "./global/fonts.scss";
 
-/* BLOCKS */
+//blocks
 @import "./blocks/button.scss";
 @import "./blocks/header.scss";
 @import "./blocks/slider.scss";
@@ -12,6 +12,9 @@
 @import "./blocks/features.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/filter.scss";
-@import "./blocks/range-price.scss";
 @import "./blocks/select.scss";
 @import "./blocks/card.scss";
+
+//nouislider
+@import "./../vendor/nouislider.css";
+@import "./../vendor/range.scss";

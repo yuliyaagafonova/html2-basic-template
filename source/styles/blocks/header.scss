@@ -4,7 +4,8 @@
 }
 
 .header__logo {
-  padding: 9px 0;
+  padding-top: 12px;
+  padding-bottom: 7px;
 }
 
 .header__logo span {
@@ -98,12 +99,12 @@
     }
 
     &:nth-child(2) {
-      top: 50%;
+      top: 48%;
       transition: 0.2s;
     }
 
     &:nth-child(3) {
-      top: 60%;
+      top: 56%;
       transition: 0.2s;
     }
   }
@@ -112,7 +113,7 @@
 .header__button.is-active {
   span {
     &:nth-child(1) {
-      transform: translate(-10px, 6px) rotate(-45deg);
+      transform: translate(-10px, 7px) rotate(-45deg);
       height: 1px;
       transition: 0.2s;
     }
@@ -122,7 +123,7 @@
     }
 
     &:nth-child(3) {
-      transform: translate(-10px, -6px) rotate(45deg);
+      transform: translate(-10px, -3px) rotate(45deg);
       height: 1px;
       transition: 0.2s;
     }
@@ -131,18 +132,18 @@
 
 @media (min-width: $width-tablet) {
   .header__wrapper {
-    gap: 46px;
+    gap: 65px;
   }
 
   .header__logo {
-    padding: 19px 0;
+    padding: 21px 0 17px;
   }
 
   .header__nav {
-    max-width: 600px;
+    width: 580px;
     display: flex;
     align-items: start;
-    gap: 60px;
+    gap: 35px;
   }
 
   .header__list {
@@ -150,7 +151,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 400px;
+    width: 405px;
   }
 
   .header__item {
@@ -205,6 +206,7 @@
 
   .header__logo span {
     @include small-text;
+    letter-spacing: normal;
     display: block;
     width: 126px;
   }
@@ -214,19 +216,20 @@
   }
 
   .header__nav {
-    gap: 162px;
-    max-width: 1040px;
+    gap: 159px;
+    width: 1040px;
   }
 
   .header__list {
-    gap: 20px;
-    width: 460px;
+    gap: 19px;
+    width: 463px;
   }
 
   .header__user-list {
-    width: fit-content;
-    max-width: 261px;
-    gap: 20px;
+    max-width: none;
+    width: 261px;
+    height: 60px;
+    gap: 19px;
     right: auto;
   }
 
@@ -234,7 +237,8 @@
     @include small-text;
     text-decoration: none;
     text-transform: uppercase;
-    min-width: 110px;
+    width: fit-content;
+    padding: 32px 20px;
     display: flex;
     gap: 8px;
   }

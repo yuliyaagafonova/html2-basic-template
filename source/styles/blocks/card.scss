@@ -1,6 +1,6 @@
 .card {
   background-color: $body-color;
-  padding: 40px 20px 20px;
+  padding: 41px 20px 19px;
 }
 
 .card__img {
@@ -14,7 +14,9 @@
 }
 
 .card__description {
+  width: 237px;
   margin: 0;
+  margin-top: 4px;
 }
 
 .card__price-wrapper {
@@ -24,7 +26,10 @@
 }
 
 .card__price {
-  padding: 3px 0;
+  padding: 2px 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
 }
 
 .card__button {
@@ -32,6 +37,9 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  padding: 9.5px 20px;
+  font-size: 14px;
+  height: fit-content;
 }
 
 .card__button-icon {
@@ -41,14 +49,19 @@
 @media (min-width: $width-tablet) {
   .card {
     padding: 50px 30px 30px;
+
+    &--current {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
   }
 
   .card__title {
-    margin-top: 30px;
+    margin-top: 37px;
   }
 
   .card__description {
-    margin-top: 10px;
+    margin-top: 15px;
+    width: 289px;
   }
 
   .card__price-wrapper {
@@ -56,4 +69,13 @@
   }
 }
 
+@media (min-width: $width-desktop) {
+  .card__description {
+    width: 257px;
+  }
 
+  .card:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+}

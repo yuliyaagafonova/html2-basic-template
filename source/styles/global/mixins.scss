@@ -37,7 +37,7 @@
   font-size: 12px;
   line-height: 16px;
   color: $base-text-color;
-  letter-spacing: 2%;
+  letter-spacing: 0.03em;
 }
 
 @mixin general-title {
@@ -47,6 +47,7 @@
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  letter-spacing: 0.02em;
 
   @media (min-width: $width-tablet) {
     font-size: 56px;

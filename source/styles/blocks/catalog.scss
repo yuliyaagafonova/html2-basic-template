@@ -3,7 +3,7 @@
 }
 
 .catalog__wrapper {
-  padding-top: 50px;
+  padding-top: 47px;
   padding-bottom: 44px;
 }
 
@@ -17,7 +17,7 @@
   @include block-title;
   text-align: center;
   line-height: 36px;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .catalog__cards {
@@ -32,14 +32,78 @@
   row-gap: 20px;
 }
 
+.catalog__pagination {
+  @include list-reset;
+  margin-top: 41px;
+  display: flex;
+  gap: 20px;
+}
+
+.catalog__pagination-link {
+  @include filter-text;
+  background-color: $body-color;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  font-weight: 400;
+  text-decoration: none;
+
+  &--current {
+    background-color: transparent;
+    color: $base-text-color;
+    font-weight: 600;
+  }
+}
+
+.catalog__pagination-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  background-color: $body-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}
+
+.catalog__pagination-button-text {
+  display: none;
+}
+
+.catalog__pagination-icon {
+  fill: $primary-color;
+}
+
+.catalog__pagination-link--current:hover,
+.catalog__pagination-link--current:focus-visible {
+  cursor: default;
+  background-color: transparent;
+  color: $base-text-color;
+}
+
+.catalog__pagination-button:hover {
+  cursor: pointer;
+}
+
+.catalog__pagination-button:hover .catalog__pagination-icon {
+  fill: $body-color;
+}
+
 @media (min-width: 768px) {
   .catalog__wrapper {
-    padding-top: 80px;
+    padding-top: 77px;
     padding-bottom: 90px;
   }
 
   .catalog__cards {
-    margin-top: 44px;
+    margin-top: 40px;
   }
 
   .catalog__cards-select {
@@ -52,11 +116,33 @@
     row-gap: 30px;
     column-gap: 30px;
   }
+
+  .catalog__pagination {
+    justify-content: end;
+    margin-top: 70px;
+  }
+
+  .catalog__pagination-button {
+    width: fit-content;
+    padding: 8px 20px;
+
+    &--right {
+      transform: rotate(0deg);
+    }
+  }
+
+  .catalog__pagination-button-text {
+    display: block;
+  }
+
+  .catalog__pagination-icon {
+    display: none;
+  }
 }
 
 @media (min-width: $width-desktop) {
   .catalog__wrapper {
-    padding-top: 100px;
+    padding-top: 97px;
     padding-bottom: 120px;
   }
 
@@ -67,13 +153,17 @@
   }
 
   .catalog__cards {
-    margin-top: 0;
+    margin-top: -5px;
   }
 
   .catalog__cards-list {
-    margin-top: 10px;
+    margin-top: 27px;
     grid-template-columns: repeat(3, 317px);
     row-gap: 30px;
     column-gap: 30px;
+  }
+
+  .catalog__pagination {
+    margin-top: 60px;
   }
 }

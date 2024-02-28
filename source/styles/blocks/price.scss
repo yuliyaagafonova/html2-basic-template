@@ -6,6 +6,7 @@
   margin-right: auto;
 
   @media (min-width: $width-desktop) {
+    margin-top: 39px;
     margin-left: inherit;
   }
 }
@@ -13,7 +14,7 @@
 .price__wrapper {
   display: flex;
   gap: 6px;
-  padding: 3px 0;
+  padding: 5px 0 3px;
 }
 
 .price__old {
@@ -32,4 +33,5 @@
 .price__button {
   width: 113px;
   z-index: 2;
+  padding: 8px 20px;
 }
