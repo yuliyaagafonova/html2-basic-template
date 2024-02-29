@@ -29,6 +29,20 @@
   text-align: center;
 }
 
+.range__input[type="number"]::-webkit-outer-spin-button,
+.range__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.range__input[type='number'],
+.range__input[type="number"]:hover,
+.range__input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+
 .range__input--min::placeholder {
   color: $disabled-color;
 }
@@ -57,7 +71,6 @@
   width: 21px;
   height: 21px;
   background: $body-color;
-  border: 3px solid $body-color;
   outline: 2px solid $primary-lighter-color;
   border-radius: 100%;
   right: -23px;
@@ -71,7 +84,7 @@
 }
 
 .range__input:focus {
-  outline: 1px solid $primary-color;
+  outline: 1px solid #593cac;
 }
 
 .range__input:disabled {
@@ -81,14 +94,23 @@
   border: 2px solid #e2e2e2;
 }
 
+.noUi-target:disabled > .noUi-horizontal .noUi-handle {
+  background: #e2e2e2;
+  outline: 2px solid $disabled-color;
+  border: none;
+  cursor: not-allowed;
+}
+
 .noUi-horizontal .noUi-handle:hover,
 .noUi-horizontal .noUi-handle:focus-visible {
   background: #ddd5f3;
+  border: 3px solid $body-color;
   outline: 2px solid $primary-color;
 }
 
 .noUi-horizontal .noUi-handle:active {
   background: $primary-color;
+  border: 3px solid $body-color;
   z-index: 5;
 }
 
@@ -106,11 +128,11 @@
   }
 
   .noUi-base {
-    width: 203px;
+    width: 200px;
   }
 
   .range__wrapper {
-    margin-top: 35px;
+    margin-top: 31px;
   }
 
   .range__input {

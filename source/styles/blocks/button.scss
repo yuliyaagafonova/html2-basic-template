@@ -38,3 +38,9 @@
   background-color: $disabled-color;
   cursor: auto;
 }
+
+.button--secondary:disabled {
+  background-color: #e2e2e2;
+  color: $body-color;
+  cursor: auto;
+}

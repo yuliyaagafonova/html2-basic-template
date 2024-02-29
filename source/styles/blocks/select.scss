@@ -2,7 +2,19 @@
   display: flex;
   text-align: start;
   gap: 10px;
-  padding: 0 6px;
+  padding: 0 3px;
+  position: relative;
+
+  // &::after {
+  //   content: "";
+  //   width: 50px;
+  //   height: 10px;
+  //   position: absolute;
+  //   top: 11px;
+  //   right: -10px;
+  //   transform: rotate(-90deg);
+  //   background: url("/images/icons/stack.svg#arrow");
+  // }
 }
 
 .select__title {
@@ -15,9 +27,34 @@
   color: $primary-color;
   width: 160px;
   height: 32px;
-  padding: 0 7px;
+  padding: 0 5px;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  position: relative;
+  appearance: none;
+  background: url("/images/icons/stack.svg#arrow-select");
+  background-position: right;
+  background-size: 8%;
+  background-repeat: no-repeat;
+}
+
+.select__control:hover,
+.select__control:focus-visible {
+  background: #f0ebff;
+  outline: none;
+}
+
+.select__control:active {
+  background: transparent;
+  outline: none;
+}
+
+@media (min-width: $width-tablet) {
+  .select {
+    padding: 0 6px;
+  }
+
+  .select__control {
+    padding: 0 6px;
+  }
 }

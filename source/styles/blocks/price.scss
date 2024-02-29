@@ -1,6 +1,7 @@
 .price {
   width: 230px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
@@ -15,6 +16,10 @@
   display: flex;
   gap: 6px;
   padding: 5px 0 3px;
+
+  @media (min-width: $width-tablet) {
+    padding: 4px 0 3px;
+  }
 }
 
 .price__old {
@@ -22,12 +27,17 @@
   line-height: 32px;
   color: $primary-color;
   text-decoration: line-through;
+
+  @media (min-width: $width-tablet) {
+    padding: 2px 0 0;
+  }
 }
 
 .price__new {
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
+  margin-top: -1px;
 }
 
 .price__button {

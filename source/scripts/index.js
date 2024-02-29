@@ -8,4 +8,3 @@ function ButtonClick () {
 }
 
 burgerButton.addEventListener('click', ButtonClick);
-

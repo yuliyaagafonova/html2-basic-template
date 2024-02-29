@@ -1,7 +1,7 @@
 const arrowLeft = document.querySelector('.slider-button-prev');
 const arrowRight = document.querySelector('.slider-button-next');
 const slides = document.querySelectorAll('.slider__item');
-const bottom = document.querySelector('.slider__pagination');
+const bottom = document.querySelector('.slider-pagination');
 
 let currentSlideIndex = 0;
 const paginationCircles = [];

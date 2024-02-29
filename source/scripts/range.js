@@ -3,7 +3,7 @@ const rangeSlider = document.getElementById('range');
 noUiSlider.create(rangeSlider, {
   start: [0, 900],
   connect: true,
-  step: 50,
+  step: 1,
   range: {
     'min': [0],
     'max': [1000]
@@ -14,7 +14,7 @@ const input0 = document.getElementById('range-input-min');
 const input1 = document.getElementById('range-input-max');
 const inputs = [input0, input1];
 
-rangeSlider.noUiSlider.on('update', function(values, handle) {
+rangeSlider.noUiSlider.on('update', (values, handle) => {
   inputs[handle].value = Math.round(values[handle]);
 });
 

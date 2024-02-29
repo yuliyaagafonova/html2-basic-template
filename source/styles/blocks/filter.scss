@@ -69,6 +69,13 @@
   cursor: auto;
 }
 
+.filter__radio:disabled:checked + .filter__radio-style {
+  background-color: $disabled-color;
+  outline: 2px solid $disabled-color;
+  border: 3px solid $body-color;
+  cursor: auto;
+}
+
 .filter__radio:disabled ~ .filter__control {
   cursor: default;
   color: $disabled-color;
@@ -127,6 +134,17 @@
   outline: 2px solid $disabled-color;
   opacity: 0.35;
   cursor: auto;
+}
+
+.filter__checkbox:disabled:checked + .filter__checkbox-style {
+  background-color: $disabled-color;
+  outline: 2px solid $disabled-color;
+  opacity: 0.35;
+  cursor: auto;
+}
+
+.filter__checkbox:disabled:checked + .filter__checkbox-style::after {
+  background-color: #000000;
 }
 
 .filter__checkbox:disabled ~ .filter__control {

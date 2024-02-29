@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Drink2Go — интернет-магазин по продаже кофейных напитков</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
     <script src="scripts/slider.js"defer></script>
-    <script src="scripts/range.js"defer></script>
+    <script src="scripts/range.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header container">
+    <header class="header container" data-test="header">
       <div class="header__wrapper">
         <a class="header__logo" href="#">
           <picture>
@@ -67,7 +71,7 @@
       </div>
     </header>
     <main class="page__main">
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="hero__wrapper">
           <h1 class="hero__title visually-hidden">
             Drink2Go - интернет-магазин по продаже кофейных напитков.
@@ -88,7 +92,7 @@
                     <div class="slider__item-info">
                       <span class="slider__accent">Новинка!</span>
                       <h2 class="slider__title">Декаф Флэт Уайт</h2>
-                      <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии<br>с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                      <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                       <div class="slider__price price">
                         <div class="price__wrapper">
                           <span class="price__old">295₽</span>
@@ -170,7 +174,7 @@
           </div>
         </div>
       </section>
-      <section class="features">
+      <section class="features" data-test="features">
         <div class="features__wrapper container">
           <span class="features__accent">Преимущества</span>
           <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
@@ -185,7 +189,7 @@
               </div>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
+              <svg class="features__icon features__icon--high" width="52" height="56" aria-hidden="true" focusable="false">
                 <use href="images/icons/stack.svg#shield"></use>
               </svg>
               <div class="features__info">
@@ -194,7 +198,7 @@
               </div>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="52" height="56" aria-hidden="true" focusable="false">
+              <svg class="features__icon features__icon--high" width="52" height="56" aria-hidden="true" focusable="false">
                 <use href="images/icons/stack.svg#lightning"></use>
               </svg>
               <div class="features__info">
@@ -214,7 +218,7 @@
           </ul>
         </div>
       </section>
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <div class="catalog__wrapper container">
           <span class="catalog__accent">Каталог</span>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
@@ -447,6 +451,13 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section class="map" data-test="map">
+        <h2 class="map__title visually-hidden">Где мы находимся.</h2>
+        <picture>
+          <source type="image/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
+          <img class="map__img" src="images/map@1x.png" srcset="images/map@2x.png 2x" width="320" height="420" alt="Карта с точкой, где мы находимся.">
+        </picture>
       </section>
     </main>
     <script src="vendor/nouislider.js"></script>

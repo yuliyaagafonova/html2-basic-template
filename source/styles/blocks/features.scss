@@ -43,7 +43,7 @@
   }
 
   .features__list {
-    margin-top: 62px;
+    margin-top: 63px;
     display: grid;
     grid-template-columns: repeat(2, 339px);
     column-gap: 30px;
@@ -67,6 +67,10 @@
 
   .features__item-description {
     margin-top: 16px;
+  }
+
+  .features__icon--high {
+    margin-top: -3px;
   }
 }
 

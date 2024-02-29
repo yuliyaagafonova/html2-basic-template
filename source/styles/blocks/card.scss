@@ -10,13 +10,13 @@
 
 .card__title {
   @include card-title;
-  margin-top: 24px;
+  margin-top: 23px;
 }
 
 .card__description {
   width: 237px;
   margin: 0;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .card__price-wrapper {
@@ -26,10 +26,11 @@
 }
 
 .card__price {
-  padding: 2px 0;
+  padding: 3px 0;
   font-size: 20px;
   line-height: 32px;
   font-weight: 600;
+  margin-left: -2px;
 }
 
 .card__button {
@@ -48,11 +49,7 @@
 
 @media (min-width: $width-tablet) {
   .card {
-    padding: 50px 30px 30px;
-
-    &--current {
-      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-    }
+    padding: 50px 30px 29px;
   }
 
   .card__title {
@@ -67,9 +64,19 @@
   .card__price-wrapper {
     margin-top: 20px;
   }
+
+  .card__price {
+    padding: 2px 0;
+  }
 }
 
 @media (min-width: $width-desktop) {
+  .card {
+    &--current {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+
   .card__description {
     width: 257px;
   }
