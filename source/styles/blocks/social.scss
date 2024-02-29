@@ -1,0 +1,37 @@
+.social {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  flex-wrap: wrap;
+  width: 162px;
+}
+
+.social__link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__icon {
+  fill: $disabled-color;
+}
+
+.social__link:hover,
+.social__link:focus-visible {
+  background: #f0ebff;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus-visible .social__icon {
+  fill: $primary-color;
+}
+
+.social__link:active {
+  background: #d8d0ee;
+}
+
+.social__link:active .social__icon {
+  fill: $primary-color;
+}

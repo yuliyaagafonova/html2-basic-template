@@ -4,17 +4,15 @@
   gap: 10px;
   padding: 0 3px;
   position: relative;
+}
 
-  // &::after {
-  //   content: "";
-  //   width: 50px;
-  //   height: 10px;
-  //   position: absolute;
-  //   top: 11px;
-  //   right: -10px;
-  //   transform: rotate(-90deg);
-  //   background: url("/images/icons/stack.svg#arrow");
-  // }
+.select__icon {
+  position: absolute;
+  right: 5px;
+  background: url("/images/icons/stack.svg#arrow-select");
+  width: 11px;
+  height: 11px;
+  display: none;
 }
 
 .select__title {
@@ -27,26 +25,33 @@
   color: $primary-color;
   width: 160px;
   height: 32px;
-  padding: 0 5px;
+  padding: 5px 10px;
   border: none;
-  background-color: transparent;
   cursor: pointer;
   appearance: none;
-  background: url("/images/icons/stack.svg#arrow-select");
-  background-position: right;
-  background-size: 8%;
+  background: transparent url("/images/icons/stack.svg#arrow-select");
+  background-position: right 3% top 45%;
+  background-size: 7%;
   background-repeat: no-repeat;
 }
 
 .select__control:hover,
 .select__control:focus-visible {
-  background: #f0ebff;
   outline: none;
+  background: #f0ebff url("/images/icons/stack.svg#arrow-select");
+  background-position: right 3% top 45%;
+  background-size: 7%;
+  background-repeat: no-repeat;
 }
 
 .select__control:active {
-  background: transparent;
-  outline: none;
+  background: none;
+}
+
+.select__control:active ~ .select__icon {
+  display: block;
+  transform: rotate(180deg);
+  top: 12px;
 }
 
 @media (min-width: $width-tablet) {

@@ -1,0 +1,94 @@
+.footer__social-wrapper {
+  display: flex;
+  gap: 38px;
+  padding-top: 11px;
+  padding-bottom: 17px;
+}
+
+.footer__social-logo img {
+  padding-top: 5.5px;
+}
+
+.footer__social-logo-text {
+  display: none;
+}
+
+.footer__lists {
+  @include list-reset;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 1px;
+    background: $secondary-color;
+    bottom: 0;
+    left: -20px;
+  }
+}
+
+.footer__list-wrapper {
+  padding: 20px 0 18px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 1px;
+    background: $secondary-color;
+    top: 0;
+    left: -20px;
+  }
+}
+
+.footer__lists li:last-child {
+  padding-bottom: 10px;
+}
+
+.footer__list-title {
+  color: $primary-color;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.footer__list {
+  @include list-reset;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__link {
+  @include small-text;
+  text-decoration: none;
+  color: $base-text-color;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footer__copyright {
+  @include small-text;
+  margin: 0;
+  padding: 20px 0 30px;
+  text-align: center;
+  color: $disabled-color;
+  background-image: url("/images/icons/stack.svg#logo-academy");
+  background-position: right 23px top 20px;
+  background-size: 12px 16px;
+  background-repeat: no-repeat;
+}
+
+.footer__link:hover,
+.footer__link:focus-visible {
+  color: $primary-lighter-color;
+  outline: none;
+}
+
+.footer__link:active {
+  color: #593cac;
+}

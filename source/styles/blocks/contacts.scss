@@ -1,0 +1,30 @@
+.contacts__adress {
+  font-style: normal;
+  padding-left: 19px;
+  background-image: url("/images/icons/stack.svg#mark");
+  background-position: left top 2px;
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+
+.contacts__phone {
+  padding-left: 19px;
+  text-decoration: none;
+  color: $base-text-color;
+  background-image: url("/images/icons/stack.svg#phone");
+  background-position: left top;
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+}
+
+.contacts__phone:hover,
+.contacts__phone:focus-visible {
+  color: $primary-lighter-color;
+  outline: none;
+}
+
+.contacts__phone:active {
+  color: #593cac;
+}
+
