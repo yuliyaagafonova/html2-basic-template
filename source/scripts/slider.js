@@ -4,29 +4,29 @@ const slides = document.querySelectorAll('.slider__item');
 const bottom = document.querySelector('.slider-pagination');
 
 let currentSlideIndex = 0;
-const paginationCircles = [];
+const paginationRectangle = [];
 
-function createPaginationCircle() {
+function createPaginationRectangle() {
   const div = document.createElement('div');
   div.className = ('slider__switch');
   bottom.appendChild(div);
-  paginationCircles.push(div);
+  paginationRectangle.push(div);
 }
 
 function addPagination() {
-  slides.forEach(createPaginationCircle);
-  paginationCircles[0].classList.add('active');
-  paginationCircles.forEach((circle, index) => {
-    circle.addEventListener('click', () => changeSlide(index));
+  slides.forEach(createPaginationRectangle);
+  paginationRectangle[0].classList.add('active');
+  paginationRectangle.forEach((rectangle, index) => {
+    rectangle.addEventListener('click', () => changeSlide(index));
   });
 }
 
 function addActiveClass() {
-  paginationCircles[currentSlideIndex].classList.add('active');
+  paginationRectangle[currentSlideIndex].classList.add('active');
 }
 
 function removeActiveClass() {
-  paginationCircles[currentSlideIndex].classList.remove('active');
+  paginationRectangle[currentSlideIndex].classList.remove('active');
 }
 
 function showSlide() {

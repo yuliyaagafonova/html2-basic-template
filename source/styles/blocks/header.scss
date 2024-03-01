@@ -146,7 +146,6 @@
 .header__user-link:hover,
 .header__user-link:focus-visible {
   color: $primary-color;
-  outline: none;
 }
 
 .header__button:active {
@@ -195,6 +194,7 @@
     text-transform: uppercase;
     font-weight: 500;
     padding: 31px 20px;
+    letter-spacing: 0.03em;
 
     &--current {
       border-bottom: 2px solid $primary-color;
@@ -219,6 +219,11 @@
   .header__link:hover,
   .header__link:focus-visible {
     color: $primary-color;
+    outline: none;
+  }
+
+  .header__user-link:hover,
+  .header__user-link:focus-visible {
     outline: none;
   }
 }

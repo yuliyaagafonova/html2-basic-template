@@ -38,7 +38,7 @@
 
 @media (min-width: $width-tablet) {
   .features__wrapper {
-    padding-top: 57px;
+    padding-top: 58px;
     padding-bottom: 100px;
   }
 
@@ -76,7 +76,7 @@
 
 @media (min-width: $width-desktop) {
   .features__wrapper {
-    padding-top: 100px;
+    padding-top: 99px;
     padding-bottom: 120px;
   }
 
@@ -88,9 +88,18 @@
     padding: 0;
   }
 
+  .features__title {
+    margin-top: 1px;
+  }
+
+
   .features__item {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .features__item-title {
+    margin-top: 7px;
   }
 
   .features__icon {

@@ -7,7 +7,7 @@
   margin-right: auto;
 
   @media (min-width: $width-desktop) {
-    margin-top: 39px;
+    margin-top: 40px;
     margin-left: inherit;
   }
 }
@@ -28,8 +28,8 @@
   color: $primary-color;
   text-decoration: line-through;
 
-  @media (min-width: $width-tablet) {
-    padding: 2px 0 0;
+  @media (min-width: $width-desktop) {
+    padding-top: 1px;
   }
 }
 

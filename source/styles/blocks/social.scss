@@ -35,3 +35,15 @@
 .social__link:active .social__icon {
   fill: $primary-color;
 }
+
+@media (min-width: $width-tablet) {
+  .social {
+    width: fit-content;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .social {
+    margin-top: 48px;
+  }
+}

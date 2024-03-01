@@ -1,11 +1,12 @@
 .contacts__adress {
+  width: 261px;
   font-style: normal;
   padding-left: 19px;
   background-image: url("/images/icons/stack.svg#mark");
   background-position: left top 2px;
   background-size: 13px 16px;
   background-repeat: no-repeat;
-  margin-top: 1px;
+  margin-top: 4px;
 }
 
 .contacts__phone {
@@ -28,3 +29,15 @@
   color: #593cac;
 }
 
+@media (min-width: $width-tablet) {
+  .contacts__adress {
+    width: 223px;
+    margin-top: 3px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .contacts__adress {
+    width: 317px;
+  }
+}
